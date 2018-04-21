@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="container">
+            <div class="mb-20">
+                <a class="btn btn-primary" href="/editBook">Create a new book 📖</a>
+            </div>
+            <table id="JS-books-table" class="table table-bordered">
+                <colgroup>
+                    <col width="10%" />
+                    <col width="30%" />
+                    <col width="20%" />
+                    <col width="20%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>图书编号</th>
+                        <th>书名</th>
+                        <th>描述</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="mt--15">
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="scripts/books.js"></script>
+</html>
