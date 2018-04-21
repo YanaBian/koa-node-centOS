@@ -2,7 +2,8 @@ language: node_js
 node_js:
 - 9.10.1
 after_script:
-- scp -o StrictHostKeyChecking=no build.zip  yana:/root/books_koa2travistest
+# - scp -o StrictHostKeyChecking=no build.zip  yana:/root/books_koa2travistest
+- scp -o StrictHostKeyChecking=no  ./app.js  yana:/root/books_koa2travistest
 before_install:
 - openssl aes-256-cbc -K $encrypted_590b5d69106a_key -iv $encrypted_590b5d69106a_iv
   -in yana_rsa.enc -out yana_rsa -d
