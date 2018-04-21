@@ -1,0 +1,7 @@
+User root
+Host yana
+HostName 39.105.5.249
+
+StrictHostKeyChecking no
+IdentityFile ~/.ssh/yana_rsa
+IdentitiesOnly yes
