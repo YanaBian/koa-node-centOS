@@ -3,10 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="styles/index.css">
-	<script type="text/javascript" src="scripts/index.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="styles/index.css">-->
+	<!--<script type="text/javascript" src="scripts/index.js"></script>-->
+	<script src="https://cdn.bootcss.com/axios/0.18.0/axios.js"></script>
+	<!--<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>-->
+	<script type="text/javascript" src="../node_modules/localforage/dist/localforage.js"></script>
+	<script>console.log('localforage is: ', localforage);</script>
 </head>
 <body>
-	helle koa2
+	hello koa2
+	<script>
+
+		axios.get('../public/scripts/index.js')
+				.then(function(response) {
+					console.log(response.data);
+					localforage.setItem('index1', response.data).then(function (value) {
+						// Do other things once the value has been saved.
+						console.log(value);
+					}).catch(function(err) {
+						// This code runs if there were any errors
+						console.log(err);
+					});
+				})
+				.catch(function(error) {
+					console.log(error);
+				});
+
+
+
+
+
+//
+//		localforage.getItem('somekey').then(function(value) {
+//			// This code runs once the value has been loaded
+//			// from the offline store.
+//			console.log(value);
+//		}).catch(function(err) {
+//			// This code runs if there were any errors
+//			console.log(err);
+//		});
+
+
+
+	</script>
 </body>
 </html>

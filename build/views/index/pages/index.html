@@ -1,0 +1,21 @@
+{% extends '../../layout.html' %}
+
+{% block head %}
+<!--link-->
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="container">
+        {% include '../../../widgets/createBtn/createBtn.html' %}
+        {% include '../../../widgets/table/table.html' %}
+        <div class="mt--15">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="./scripts/index.bundle.js"></script>
+{% endblock %}
